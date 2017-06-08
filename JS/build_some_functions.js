@@ -50,7 +50,7 @@ function caller2(x) {
     }
   }, 2000);
   console.log('ending?');
-  console.log('interesting');
+  return 'interesting';
 }
 
 caller2(myDoubleConsoleLog);
