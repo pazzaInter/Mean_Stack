@@ -1,46 +1,46 @@
 var person = {
   name: "G-Unit",
   distance_traveled: 0,
-  say_name: function () {
+  say_name:() => {
     console.log(person.name);
     return person
   },
 
-  say_something: function (x) {
-    console.log(person.name, "says", x);
+  say_something:(x) => {
+    console.log(`${ person.name } says ${ x }`);
     return person
   },
 
-  walk: function () {
-    console.log(person.name, 'is walking');
+  walk:() => {
+    console.log(`${ person.name } is walking`);
     person.distance_traveled += 3;
     return person
   },
 
-  run: function () {
-    console.log(person.name, 'is running');
+  run:() => {
+    console.log(`${ person.name } is running`);
     person.distance_traveled += 10;
     return person
   },
 
-  crawl: function () {
-    console.log(person.name, 'is crawling');
+  crawl:() => {
+    console.log(`${ person.name } is crawling`);
     person.distance_traveled +=1;
     return person
   },
 }
 
-function personConstructor(name) {
+const personConstructor = (name) => {
   person.name = name
   return person;
 }
 
-var mauro = personConstructor('Mauro');
+const mauro = personConstructor('Mauro');
 
 console.log(mauro.run().crawl().distance_traveled);
 
 function ninjaConstructor(name, cohort) {
-  var ninja = {
+  const ninja = {
     name: name,
     cohort: cohort,
     beltLevel: 'Yellow Belt',
@@ -61,7 +61,7 @@ function ninjaConstructor(name, cohort) {
   return ninja
 }
 
-var karateKid = ninjaConstructor('Migos', 'January')
+const karateKid = ninjaConstructor('Migos', 'January')
 
 console.log(karateKid);
 console.log(karateKid.levelUp().levelUp().name);
