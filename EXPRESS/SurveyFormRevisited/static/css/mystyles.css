@@ -1,0 +1,10 @@
+* {
+  padding: 5px;
+}
+
+.response {
+  background-color: #2fe076;
+  border: solid black;
+  display: none;
+  font-weight: bold;
+}
