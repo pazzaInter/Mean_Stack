@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Wolf</title>
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+    <link rel="stylesheet" href="/css/pure-min.css">
+    <link rel="stylesheet" href="/css/mystyles.css">
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <form action="/wolves/edit/<%= wolf.id %>" method="post">
+      <input type="hidden" name="_id" value="<%= wolf.id %>">
+      <label for="name">Name:<input type="text" name="name" value="<%= wolf.name %>"></label>
+      <label for="age">Age:<input type="number" name="age" value="<%= wolf.age %>"></label>
+      <label for="gender">Gender:<input type="text" name="gender" value="<%= wolf.gender %>"></label>
+      <label for="alpha">Alpha:
+        <input type="radio" name="alpha" value="true">Yes
+        <input type="radio" name="alpha" value="false" checked>No
+      </label>
+      <button>Save</button>
+    </form>
+    <form action="/wolves/destroy/<%= wolf.id %>" method="post">
+      <button>Remove wolf from pack</button>
+    </form>
+  </body>
+</html>

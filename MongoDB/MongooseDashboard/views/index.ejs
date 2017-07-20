@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wolves</title>
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+    <link rel="stylesheet" href="/css/pure-min.css">
+    <link rel="stylesheet" href="/css/mystyles.css">
+  </head>
+  <body>
+    <h1>The Wolf Pack</h1>
+    <a href="/wolves/new">Add to the pack</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Alpha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let index = 0; index < wolves.length; index ++) { %>
+          <tr id="<%= wolves[index].id %>">
+            <td><%= wolves[index].name %></td>
+            <td><%= wolves[index].age %></td>
+            <td><%= wolves[index].gender %></td>
+            <td><%= wolves[index].alpha %></td>
+            <td><a href="wolves/<%= wolves[index].id %>">Go to Wolf</a></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>
